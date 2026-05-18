@@ -26,6 +26,15 @@ const Card = (props) => {
       onClick={handleClick}
       style={{ pointerEvents: pointerStyle, cursor: cursorStyle }}
     >
+      <div className={innerClass}>
+        <div className="card-back">
+          <img src={props.backImage} className="back-img" alt="back" />
+        </div>
+        <div className="card-front">
+          <img src={props.card.image} alt="front" />
+        </div>
+      </div>
+      
       
     </div>
   );
