@@ -20,6 +20,15 @@ const Card = (props) => {
      cursorStyle = "default";
   }
 
+  return (
+    <div
+      className="card"
+      onClick={handleClick}
+      style={{ pointerEvents: pointerStyle, cursor: cursorStyle }}
+    >
+      
+    </div>
+  );
 };
 
 export default Card;
