@@ -35,7 +35,7 @@ const Card = (props) => {
         </div>
       </div>
       
-      
+      {props.isMatched === true ? <div className="matched">✓</div> : null}
     </div>
   );
 };
