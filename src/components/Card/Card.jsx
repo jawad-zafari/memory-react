@@ -8,6 +8,11 @@ const Card = (props) => {
     }
   };
 
+  let innerClass = "card-inner";
+  if (props.isFlipped === true) {
+    innerClass = "card-inner flipped";
+  }
+
 };
 
 export default Card;
