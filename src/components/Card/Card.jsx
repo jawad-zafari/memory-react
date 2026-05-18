@@ -13,6 +13,13 @@ const Card = (props) => {
     innerClass = "card-inner flipped";
   }
 
+  let pointerStyle = "auto";
+  let cursorStyle = "pointer";
+  if (props.isClickable === false) {
+     pointerStyle = "none";
+     cursorStyle = "default";
+  }
+
 };
 
 export default Card;
