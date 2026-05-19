@@ -80,6 +80,13 @@ const Game = (props) => {
     }
   };
 
+  const resetTurn = () => {
+    setChoiceOne(null);
+    setChoiceTwo(null);
+    setIsComparing(false);
+    props.setTurns(props.turns + 1);
+  };
+
 };
 
 export default Game;
