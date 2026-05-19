@@ -132,6 +132,12 @@ const Game = (props) => {
     shuffleCards();
   }, []);
 
+  useEffect(() => {
+    if (props.turns === 0 && cards.length > 0) {
+      shuffleCards();
+    }
+  }, [props.turns]);
+
 };
 
 export default Game;
