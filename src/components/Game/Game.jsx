@@ -36,6 +36,37 @@ const Game = (props) => {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [isComparing, setIsComparing] = useState(false);
 
+  const shuffleCards = () => {
+    let deck = [];
+
+    for (let i = 0; i < 12; i++) {
+      let currentImage = cardImages[i];
+
+      deck.push({
+        image: currentImage.image,
+        pairId: currentImage.id,
+        uniqueId: Math.random(), 
+        isMatched: false
+      });
+
+      deck.push({
+        image: currentImage.image,
+        pairId: currentImage.id,
+        uniqueId: Math.random() + 1,
+        isMatched: false
+      });
+    }
+
+    deck.sort(() => 0.5 - Math.random());
+
+    setCards(deck);
+    setChoiceOne(null);
+    setChoiceTwo(null);
+    props.setTurns(0); 
+    setIsComparing(false);
+  };
+
+  
 };
 
 export default Game;
