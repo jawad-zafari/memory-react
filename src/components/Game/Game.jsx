@@ -138,6 +138,11 @@ const Game = (props) => {
     }
   }, [props.turns]);
 
+  return (
+    <div className="cards-grid">
+      
+    </div>
+  );
 };
 
 export default Game;
