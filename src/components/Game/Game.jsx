@@ -146,7 +146,10 @@ const Game = (props) => {
           flipped = true;
         }
 
-        
+        let clickable = true;
+        if (isComparing === true || card.isMatched === true) {
+          clickable = false;
+        }
 
         
       })}
