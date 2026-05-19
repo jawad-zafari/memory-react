@@ -140,7 +140,16 @@ const Game = (props) => {
 
   return (
     <div className="cards-grid">
-      
+      {cards.map((card) => {
+        let flipped = false;
+        if (card === choiceOne || card === choiceTwo || card.isMatched === true) {
+          flipped = true;
+        }
+
+        
+
+        
+      })}
     </div>
   );
 };
