@@ -87,6 +87,35 @@ const Game = (props) => {
     props.setTurns(props.turns + 1);
   };
 
+  useEffect(() => {
+    if (choiceOne !== null && choiceTwo !== null) {
+      
+      if (choiceOne.pairId === choiceTwo.pairId) {
+        
+        let updatedCards = cards.map((card) => {
+          if (card.uniqueId === choiceOne.uniqueId || card.uniqueId === choiceTwo.uniqueId) {
+            return {
+              image: card.image,
+              pairId: card.pairId,
+              uniqueId: card.uniqueId,
+              isMatched: true 
+            };
+          } else {
+            return card;
+          }
+        });
+
+        setCards(updatedCards);
+        resetTurn();
+
+      } else {
+        setTimeout(() => {
+          resetTurn();
+        }, 1000);
+      }
+    }
+  }, [choiceOne, choiceTwo]);
+
 };
 
 export default Game;
