@@ -29,3 +29,9 @@ const cardImages = [
   { id: 11, image: card11 },
   { id: 12, image: card12 },
 ];
+
+const Game = (props) => {
+  
+};
+
+export default Game;
