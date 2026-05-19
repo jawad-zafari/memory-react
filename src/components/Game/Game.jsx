@@ -66,7 +66,20 @@ const Game = (props) => {
     setIsComparing(false);
   };
 
-  
+  const handleChoice = (selectedCard) => {
+    if (isComparing === true) { return; }
+    if (selectedCard.isMatched === true) { return; }
+    if (selectedCard === choiceOne) { return; }
+    if (selectedCard === choiceTwo) { return; }
+
+    if (choiceOne === null) {
+      setChoiceOne(selectedCard);
+    } else if (choiceTwo === null) {
+      setChoiceTwo(selectedCard);
+      setIsComparing(true); 
+    }
+  };
+
 };
 
 export default Game;
