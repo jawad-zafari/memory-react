@@ -31,7 +31,11 @@ const cardImages = [
 ];
 
 const Game = (props) => {
-  
+  const [cards, setCards] = useState([]);
+  const [choiceOne, setChoiceOne] = useState(null);
+  const [choiceTwo, setChoiceTwo] = useState(null);
+  const [isComparing, setIsComparing] = useState(false);
+
 };
 
 export default Game;
