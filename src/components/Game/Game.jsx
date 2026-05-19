@@ -116,6 +116,18 @@ const Game = (props) => {
     }
   }, [choiceOne, choiceTwo]);
 
+  useEffect(() => {
+    if (cards.length > 0) {
+      let allMatched = true;
+      for (let i = 0; i < cards.length; i++) {
+        if (cards[i].isMatched === false) {
+          allMatched = false;
+        }
+      }
+      props.setIsWon(allMatched);
+    }
+  }, [cards]);
+
 };
 
 export default Game;
