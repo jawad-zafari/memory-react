@@ -128,6 +128,10 @@ const Game = (props) => {
     }
   }, [cards]);
 
+  useEffect(() => {
+    shuffleCards();
+  }, []);
+
 };
 
 export default Game;
