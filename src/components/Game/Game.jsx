@@ -151,7 +151,17 @@ const Game = (props) => {
           clickable = false;
         }
 
-        
+        return (
+          <Card
+            key={card.uniqueId}
+            card={card}
+            backImage={backImage}
+            isFlipped={flipped}
+            isMatched={card.isMatched}
+            onClick={() => handleChoice(card)}
+            isClickable={clickable}
+          />
+        );
       })}
     </div>
   );
