@@ -8,10 +8,14 @@ const App = () => {
   const [turns, setTurns] = useState(0);
   const [isWon, setIsWon] = useState(false);
 
-  
+  const handleNewGame = () => {
+    setTurns(0);
+    setIsWon(false);
+  };
+
   return (
     <div className="App">
-     
+      
     </div>
   );
 };
