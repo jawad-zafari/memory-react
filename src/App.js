@@ -5,7 +5,10 @@ import Scoreboard from './components/Scoreboard/Scoreboard.jsx';
 import './App.css';
 
 const App = () => {
- 
+  const [turns, setTurns] = useState(0);
+  const [isWon, setIsWon] = useState(false);
+
+  
   return (
     <div className="App">
      
