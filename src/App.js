@@ -15,6 +15,12 @@ const App = () => {
 
   return (
     <div className="App">
+      <Title />
+      <Scoreboard 
+        turns={turns} 
+        isWon={isWon} 
+        onNewGame={handleNewGame} 
+      />
       
     </div>
   );
