@@ -21,7 +21,12 @@ const App = () => {
         isWon={isWon} 
         onNewGame={handleNewGame} 
       />
-      
+      <Game
+        turns={turns}
+        setTurns={setTurns}
+        isWon={isWon}
+        setIsWon={setIsWon}
+      />
     </div>
   );
 };
